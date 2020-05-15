@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { ToastController, IonButton, IonLabel, IonText, IonTextarea, IonInput } from '@ionic/angular';
 
