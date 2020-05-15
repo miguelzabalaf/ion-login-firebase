@@ -11,9 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 //firebase config
 import { AngularFirestoreModule } from "@angular/fire/firestore"; //Modulo Firestore (BD)
-import { AngularFireAuthModule } from "@angular/fire/auth";  //Modulo de authenticacion
-import { AngularFireModule } from "@angular/fire";            //Modulo para inicializar y que todo funcione bien vergas
-import { firebaseConfig} from "../environments/environment";     // aqui se encuentra una variable de configuracion para inicializar firebase
+import { AngularFireAuthModule } from "@angular/fire/auth";       //Modulo de authenticacion
+import { AngularFireModule } from "@angular/fire";                //Modulo para inicializar y que todo funcione bien vergas
+import { firebaseConfig} from "../environments/environment";      // aqui se encuentra una variable de configuracion para inicializar firebase
 
 @NgModule({
   declarations: [AppComponent],
