@@ -8,9 +8,13 @@ import { AuthService } from '../services/auth.service';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor( public authService : AuthService ) { }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 
 }

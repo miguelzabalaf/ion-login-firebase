@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
     this.authService.login(this.email, this.password).then(() => {
       this.router.navigate(['/home']);
       this.toast('Bienvenido', 'success', 1000);
+      this.ionsubmitButton.disabled = false;
     }).catch(err => {
       this.loginFlase();
       setTimeout(() => {
