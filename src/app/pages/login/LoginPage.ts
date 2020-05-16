@@ -10,13 +10,15 @@ import { ToastController, IonButton, IonLabel, IonText, IonTextarea, IonInput } 
 })
 
 export class LoginPage implements OnInit {
-  email: string = '';
-  password: string = '';
-  status: string = 'Ingresar';
+  public email: string = '';
+  public password: string = '';
+  public status: string = 'Ingresar';
   @ViewChild('submitButton', { static: true }) ionsubmitButton: IonButton;
 
 
-  constructor(private authService: AuthService, public router: Router, public toastContoller: ToastController) { }
+  constructor(private authService: AuthService,
+              public router: Router,
+              public toastContoller: ToastController) { }
 
   ngOnInit() {}
 

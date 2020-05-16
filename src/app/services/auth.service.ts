@@ -8,7 +8,11 @@ import { AngularFirestore } from "@angular/fire/firestore";
 })
 export class AuthService {
 
-  constructor(private AFauth : AngularFireAuth, private router : Router, private db : AngularFirestore) { }
+  constructor(private AFauth : AngularFireAuth,
+                      private router : Router,
+                      private db: AngularFirestore,) { 
+
+  }
 
   login(email:string, password:string){
     return new Promise((resolve, rejected) =>{
@@ -24,18 +28,31 @@ export class AuthService {
     })
   }
 
-  register(email : string, password : string, name : string){
+  register(email : string, password : string, name : string, lastname : string, date : Date){
     return new Promise ((resolve, reject) => {
       this.AFauth.auth.createUserWithEmailAndPassword(email, password).then( res =>{
           // console.log(res.user.uid);
         const uid = res.user.uid;
           this.db.collection('users').doc(uid).set({
+            uid : uid,
             name : name,
-            uid : uid
+            lastname : lastname,
+            date : date,
+            email : email
           })
-        resolve(res)
-      }).catch( err => reject(err))
+        resolve( ()=> {
+
+        })
+      }).catch( err => { 
+
+      })
     })
   }
 
+  getUserEmail(){
+    return this.AFauth.auth.currentUser.email;
+    }
+
+
+  
 }
