@@ -7,6 +7,6 @@
 
 <ion-content>
   <ion-avatar (click)="selecttImageSource()" class="profile-pic">
-    <ion-img src="https://scontent-bog1-1.cdninstagram.com/v/t51.2885-19/s150x150/81711281_1042701509443610_5924580181338488832_n.jpg?_nc_ht=scontent-bog1-1.cdninstagram.com&_nc_ohc=OTEs4_BAFV0AX9JuCfj&oh=91d25a325d5feaad685ac7e19d85ae8f&oe=5EE7BE43"></ion-img>
+    <ion-img [src]="(myStoredProfileImage | async)?.image_src"></ion-img>
   </ion-avatar>
 </ion-content>
